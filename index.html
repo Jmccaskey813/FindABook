@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Book Finder</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+  </head>
+
+  <body>
+    <div class="topbar">
+      <p class="cursive">book finder</p>
+    </div>
+
+    <div id="root">
+      <div>
+        <span>search</span>
+        <br />
+        <input class="border rounded userinput" type="text" />
+        <!-- function that  -->
+        <button class="btn" onclick="searchBooks()">submit</button>
+        <!-- where the results will fill -->
+        <div class="results"></div>
+      </div>
+    </div>
+  </body>
+</html>
