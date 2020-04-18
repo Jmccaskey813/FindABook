@@ -16,7 +16,7 @@
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
   </head>
 
   <body>
@@ -28,7 +28,7 @@
       <div>
         <span>search</span>
         <br />
-        <input class="border rounded userinput" type="text" />
+        <input id="userinput" class="border rounded" type="text" />
         <!-- function that  -->
         <button class="btn" onclick="searchBooks()">submit</button>
         <!-- where the results will fill -->
