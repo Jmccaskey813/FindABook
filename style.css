@@ -1,6 +1,3 @@
-* {
-}
-
 .cursive {
   font-family: "Sacramento", cursive;
   font-size: 50px;
@@ -14,18 +11,56 @@
   background-color: black;
   z-index: 1;
 }
+.search-bar {
+  text-align: center;
+  background-color: cornflowerblue;
+}
+span {
+  display: block;
+}
 
 #root {
-  background-color: cornflowerblue;
   position: fixed;
+  text-align: center;
+  background-color: cornflowerblue;
   height: 100%;
   width: 100%;
   overflow-y: auto;
 }
 
-.userinput {
+input {
   border-radius: 1ch;
-  border: solid darkgray;
+  border: solid white;
   width: 300px;
-  height: 30px;
+  height: 40px;
+  padding-left: 20px;
+}
+
+.box {
+  display: inline-block;
+  border: solid white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 400px;
+  height: 420px;
+  border-radius: 1ch;
+  margin: 5px;
+}
+
+img {
+  width: auto;
+  max-height: 202px;
+}
+
+span {
+  font-family: "Bree Serif", serif;
+}
+
+p {
+  font-family: "Amatic SC", cursive;
+  font-size: 28px;
+}
+
+h4 {
+  font-family: "Bree Serif", serif;
 }
