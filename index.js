@@ -2,8 +2,19 @@
 
 const root = document.getElementById("root");
 
+const blueBackground = document.createElement("div");
+blueBackground.classList.add("root-fixed");
+root.appendChild(blueBackground);
+
 const results = document.createElement("div");
 let userInput = document.getElementById("userinput");
+
+const loader = document.querySelector(".loader");
+
+//adds event listener for enter key
+userInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") searchBooks();
+});
 
 //clears out any existing list on a new search query request
 function deleteChildrenOfRoot() {
@@ -12,8 +23,8 @@ function deleteChildrenOfRoot() {
 
 const searchBooks = () => {
   deleteChildrenOfRoot();
+  root.appendChild(loader);
   let searchParams = userInput.value;
-  console.log(searchParams);
   fetch(`https://www.googleapis.com/books/v1/volumes?q={${searchParams}}`)
     .then((response) => response.json())
     .then((results) => {
@@ -25,12 +36,16 @@ const searchBooks = () => {
 
 //lists items in DOM from searchBooks() function. uses data from response object
 function listItems(returnedResults) {
+  //clears loader or any existing searches
+  deleteChildrenOfRoot();
+
   returnedResults.map((book) => {
     const { volumeInfo, searchInfo } = book;
     const container = document.createElement("div");
     const br = document.createElement("br");
     container.classList.add("container-sm");
     container.classList.add("box");
+
     const title = volumeInfo.title;
 
     const author = volumeInfo.authors[0];

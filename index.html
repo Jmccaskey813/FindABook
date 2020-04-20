@@ -32,10 +32,20 @@
     <div class="container-sm search-bar">
       <br />
       <input id="userinput" type="text" placeholder="search something ..." />
-      <!-- function that  -->
+      <!-- fetches data from google api -->
       <button class="btn btn-primary" onclick="searchBooks()">submit</button>
 
       <div id="root"></div>
+
+      <!-- adds loader from bootstrap -->
+      <div class="loader root-fixed">
+        <div class="text-center">
+          <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      </div>
+      <br />
     </div>
   </body>
 </html>
