@@ -9,7 +9,11 @@ let userInput = document.getElementById("userinput");
 
 const results = document.createElement("div");
 const emptyResult = document.createElement("div");
-emptyResult.inner;
+const emptyResultText = document.createElement("p");
+emptyResultText.innerText =
+  "Looks like we couldn't find any matches. Please seach for something else";
+emptyResult.classList.add("empty-results-container");
+emptyResult.appendChild(emptyResultText);
 
 const loader = document.querySelector(".loader");
 
@@ -31,6 +35,10 @@ const searchBooks = () => {
   fetch(`https://www.googleapis.com/books/v1/volumes?q={${searchParams}}`)
     .then((response) => response.json())
     .then((results) => {
+      if (results.totalItems === 0) {
+        deleteChildrenOfRoot();
+        return root.appendChild(emptyResult);
+      }
       let books = results.items;
       listItems(books);
     });
