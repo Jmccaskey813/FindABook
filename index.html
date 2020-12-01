@@ -34,17 +34,21 @@
       <input id="userinput" type="text" placeholder="search something ..." />
       <!-- fetches data from google api -->
       <button class="btn btn-primary" onclick="searchBooks()">submit</button>
-
-      <div id="root"></div>
+      <button class="btn btn-dark ml-1" onclick="deleteChildrenOfRoot()">
+        clear
+      </button>
+      <div class="wrapper">
+        <div id="root"></div>
+      </div>
 
       <!-- adds loader from bootstrap -->
-      <div class="loader root-fixed">
+      <!-- <div class="loader root-fixed">
         <div class="text-center">
           <div class="spinner-grow" role="status">
             <span class="sr-only">Loading...</span>
           </div>
         </div>
-      </div>
+      </div> -->
       <br />
     </div>
   </body>

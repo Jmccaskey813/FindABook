@@ -19,6 +19,7 @@ userInput.addEventListener("keypress", (e) => {
 //clears out any existing list on a new search query request
 function deleteChildrenOfRoot() {
   root.innerHTML = "";
+  // root.removeChild([0]);
 }
 
 const searchBooks = () => {

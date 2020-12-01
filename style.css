@@ -81,3 +81,9 @@ h4 {
   position: relative;
   background-color: cornflowerblue;
 } */
+
+.wrapper {
+  background-color: cornflowerblue;
+  min-height: 100vh;
+  width: 100%;
+}
