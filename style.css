@@ -49,6 +49,7 @@ input {
 .box {
   background-color: whitesmoke;
   display: inline-block;
+  vertical-align: middle;
   border: solid white;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -75,3 +76,8 @@ p {
 h4 {
   font-family: "Bree Serif", serif;
 }
+
+/* .loader {
+  position: relative;
+  background-color: cornflowerblue;
+} */

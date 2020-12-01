@@ -84,15 +84,7 @@ function listItems(returnedResults) {
     container.appendChild(sampleBtn);
     container.appendChild(br);
 
-    // hide and add event listener to show. Way too long for list view
-    // const bookDescription = document.createElement("span");
-    // bookDescription.textContent = `${description}`;
-    // container.appendChild(bookDescription);
-
     root.appendChild(container);
-
-    console.log(book);
   });
 }
-
 root.appendChild(results);
