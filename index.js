@@ -2,12 +2,14 @@
 
 const root = document.getElementById("root");
 
-const blueBackground = document.createElement("div");
-blueBackground.classList.add("root-fixed");
-root.appendChild(blueBackground);
+// const blueBackground = document.createElement("div");
+// blueBackground.classList.add("root-fixed");
+// root.appendChild(blueBackground);
+let userInput = document.getElementById("userinput");
 
 const results = document.createElement("div");
-let userInput = document.getElementById("userinput");
+const emptyResult = document.createElement("div");
+emptyResult.inner;
 
 const loader = document.querySelector(".loader");
 
